@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1026978766425",
+    "project_id": "spacexrocket-d3b11",
+    "storage_bucket": "spacexrocket-d3b11.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1026978766425:android:e0f0aecfb045e89fb15b48",
+        "android_client_info": {
+          "package_name": "com.spacexfanapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1026978766425-g6gc7vdf3k335vvtqkai9fca2mnv657i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.spacexfanapplication",
+            "certificate_hash": "84c3955774b14464d58e007d48b319f572191295"
+          }
+        },
+        {
+          "client_id": "1026978766425-681euc4ubamvks8i83dvm9hi2pg3u7mq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkz_4MNX6CtH2jTza4HX051dUMSHS717U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1026978766425-681euc4ubamvks8i83dvm9hi2pg3u7mq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

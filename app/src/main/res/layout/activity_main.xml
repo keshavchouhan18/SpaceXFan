@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="MainViewModel"
+            type="com.spacexfanapplication.viewmodel.MainViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/layout_navigation_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/ll_space_x_rockets"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:id="@+id/tvRockets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SpaceX Rockets"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/sansation_bold"
+                    android:textColor="@color/colorBlue"
+                    android:layout_marginRight="5dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="2dp"
+                android:background="@color/colorGrey1"
+                android:layout_height="30dp"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:id="@+id/ll_favorite"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:id="@+id/tvFavorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Favorite"
+                    android:fontFamily="@font/sansation_bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorGrey"
+                    android:layout_marginRight="5dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="2dp"
+                android:background="@color/colorGrey1"
+                android:layout_height="30dp"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:id="@+id/ll_upcoming"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:id="@+id/tvUpcoming"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upcoming"
+                    android:fontFamily="@font/sansation_bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorGrey"
+                    android:layout_marginRight="5dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line_navbar"
+            android:layout_width="match_parent"
+            android:background="@color/colorGrey1"
+            android:layout_height="1dp"
+            android:layout_below="@id/layout_navigation_bar"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager_frag"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/line_navbar"
+            android:background="@color/white"/>
+
+    </RelativeLayout>
+
+</layout>
