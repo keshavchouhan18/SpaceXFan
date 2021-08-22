@@ -144,10 +144,10 @@ public class FavoriteFragment extends HBaseFragment<MainViewModel, FragmentFavor
     }
 
     private void getFavDataFromFirebase() {
-        ProjectUtils.showProgressDialog(getActivity(),"Please Wait...",false);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                binding.cpvRockets.setVisibility(View.GONE);
                 for(DataSnapshot userpostSnapShot:snapshot.getChildren()) {
                     FavoriteData favoriteData = userpostSnapShot.getValue(FavoriteData.class);
                     for (int i=0; i<list.size(); i++){
@@ -158,10 +158,13 @@ public class FavoriteFragment extends HBaseFragment<MainViewModel, FragmentFavor
                     }
                 }
 
-                spaceXRocketAdapter = new SpaceXRocketAdapter(getActivity(),list);
-                layoutManager = new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL, false);
-                binding.rvFavorite.setLayoutManager(layoutManager);
-                binding.rvFavorite.setAdapter(spaceXRocketAdapter);
+                if (!showList.isEmpty()){
+                    ProjectUtils.showLog(TAG,"fav resposne : "+showList.toString());
+                    spaceXRocketAdapter = new SpaceXRocketAdapter(getActivity(),list);
+                    layoutManager = new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL, false);
+                    binding.rvFavorite.setLayoutManager(layoutManager);
+                    binding.rvFavorite.setAdapter(spaceXRocketAdapter);
+                }
             }
 
             @Override

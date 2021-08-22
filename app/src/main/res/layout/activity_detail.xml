@@ -45,6 +45,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="400dp"/>
 
+                <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                    android:id="@+id/dots_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:dotsColor="@color/white"
+                    app:dotsCornerRadius="8dp"
+                    app:dotsSize="16dp"
+                    app:dotsSpacing="4dp"
+                    app:dotsWidthFactor="2.5"
+                    app:selectedDotColor="@color/colorBlue"
+                    app:progressMode="true"
+                    android:layout_below="@+id/viewpager"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="-24dp"/>
+
                 <LinearLayout
                     android:id="@+id/ll_detail"
                     android:layout_width="match_parent"

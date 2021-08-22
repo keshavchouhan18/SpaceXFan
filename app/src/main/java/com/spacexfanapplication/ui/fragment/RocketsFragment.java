@@ -26,6 +26,7 @@ import com.spacexfanapplication.base.HBaseFragment;
 import com.spacexfanapplication.databinding.FragmentRocketsBinding;
 import com.spacexfanapplication.ui.adapter.SpaceXRocketAdapter;
 import com.spacexfanapplication.utils.AppUtils;
+import com.spacexfanapplication.utils.ProjectUtils;
 import com.spacexfanapplication.viewmodel.MainViewModel;
 
 import java.util.List;
@@ -73,6 +74,7 @@ public class RocketsFragment extends HBaseFragment<MainViewModel, FragmentRocket
         public void onChanged(@Nullable final Response<SpaceXRocketsResponse> response) {
             binding.cpvRockets.setVisibility(View.GONE);
             if (response.isSuccess()){
+                ProjectUtils.showLog(TAG,"resposne : "+response.getData().getSpaceXRocketsResponse().toString());
                 addData(response.getData());
             }
         }

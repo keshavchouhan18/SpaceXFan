@@ -26,6 +26,7 @@ import com.spacexfanapplication.base.HBaseFragment;
 import com.spacexfanapplication.databinding.FragmentUpcomingBinding;
 import com.spacexfanapplication.ui.adapter.SpaceXRocketAdapter;
 import com.spacexfanapplication.utils.AppUtils;
+import com.spacexfanapplication.utils.ProjectUtils;
 import com.spacexfanapplication.viewmodel.MainViewModel;
 
 import java.util.List;
@@ -71,7 +72,7 @@ public class UpcomingFragment extends HBaseFragment<MainViewModel, FragmentUpcom
 
     private void addData(SpaceXRocketsResponse response) {
         List<SpaceXRocketsResponseItem> list = response.getSpaceXRocketsResponse();
-
+        ProjectUtils.showLog(TAG,"upcoming resposne : "+response.getSpaceXRocketsResponse().toString());
         spaceXRocketAdapter = new SpaceXRocketAdapter(getActivity(),list);
         layoutManager = new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL, false);
         binding.rvUpcoming.setLayoutManager(layoutManager);
